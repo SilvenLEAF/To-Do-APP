@@ -16,7 +16,7 @@
      font-size: 250%;
 }
 .add-item-input-holder{
-     width: 200px;
+     width: 70vw;
      border-top-left-radius: 20px;
      border-bottom-right-radius: 20px;
      background: #fff;
@@ -25,6 +25,11 @@
      justify-content: center;
      align-items: center;
 
+}
+@media screen and (min-width: 700px) {
+     .add-item-input-holder{
+          width: 500px;
+     }
 }
 .add-item-input{
      height: 20px;
