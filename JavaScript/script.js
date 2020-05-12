@@ -67,8 +67,9 @@ addItemBtn.addEventListener('click', ()=>{
      }
      deteltBtnClone.textContent = 'Delete';
 
-     //Adding in the DOM (same)
-     itemsHolder.appendChild(itemClone);
+     //Adding in the DOM but in REVERSE ORDER
+
+     itemsHolder.insertBefore(itemClone, itemsHolder.firstChild);
 
 
      numbering();
