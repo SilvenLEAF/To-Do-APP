@@ -21,6 +21,14 @@ function numbering(){
      }
 }
 
+function oddEvenDesign(){
+     const itemsArr = document.querySelectorAll('.item');
+     for(let i=0; i<itemsArr.length; i++){
+          if(i%2 !== 0){
+               itemsArr[i].classList.add('even-item');
+          }
+     }
+}
 /* --------------------------------------------------------
 .              REAL JavaScript STARTS
 --------------------------------------------------------- */
@@ -62,7 +70,9 @@ addItemBtn.addEventListener('click', ()=>{
      //Adding in the DOM (same)
      itemsHolder.appendChild(itemClone);
 
+
      numbering();
+     oddEvenDesign();
 
 })
 // --------------------------------------------------------
@@ -76,6 +86,7 @@ itemsHolder.addEventListener('click', (e)=>{
 
           targetItem.parentElement.removeChild(targetItem);
           numbering();
+          oddEvenDesign();
      }
 })
 // --------------------------------------------------------
