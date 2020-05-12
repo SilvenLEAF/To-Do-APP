@@ -9,7 +9,7 @@ const clearAllBtn = document.querySelector('.clear-all-btn');
 
 const itemsHolder = document.querySelector('.items-holder');
 
-const randomDefault = ['Let\'s do something', 'How about learning a new skill?', 'Wanna set a goal?', 'Nothing added! You forgot!!', 'How about reading a new book', 'How about going on hiking?', 'How about hanging out with friends?', 'How about exercise?', 'How about traveling abroad?', 'How about rating us in the Play Store?']
+const randomDefault = ['Let\'s do something', 'How about studying?', 'Wanna set a goal?', 'Nothing added! You forgot!!', 'How about a nap', 'How about hiking?', 'How about eating out?', 'How about exercise?', 'How about going abroad?', 'How about rating us?']
 
 /* *******************************
 .         FUNCTIONS TO-BE-USED
