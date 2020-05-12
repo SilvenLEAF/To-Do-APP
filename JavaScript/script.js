@@ -9,7 +9,7 @@ const clearAllBtn = document.querySelector('.clear-all-btn');
 
 const itemsHolder = document.querySelector('.items-holder');
 
-
+const randomDefault = ['Let\'s do something', 'How about learning a new skill?', 'Wanna set a goal?', 'Nothing added! You forgot!!', 'How about reading a new book', 'How about going on hiking?', 'How about hanging out with friends?', 'How about exercise?', 'How about traveling abroad?', 'How about rating us in the Play Store?']
 
 /* *******************************
 .         FUNCTIONS TO-BE-USED
@@ -49,7 +49,14 @@ addItemBtn.addEventListener('click', ()=>{
      itemClone.appendChild(titleClone);
      itemClone.appendChild(deteltBtnClone);
 
-     titleClone.textContent = inputTitle;
+     if(inputTitle){
+          titleClone.textContent = inputTitle;
+     } else{
+          let randomDefaultNum = Math.floor(Math.random()* randomDefault.length);
+          titleClone.style.fontStyle = 'italic';
+          titleClone.style.fontSize = '90%';
+          titleClone.textContent = randomDefault[randomDefaultNum];
+     }
      deteltBtnClone.textContent = 'Delete';
 
      //Adding in the DOM (same)
