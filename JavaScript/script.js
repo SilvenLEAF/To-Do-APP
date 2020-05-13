@@ -1,15 +1,18 @@
 /* *******************************
 .          ALL GLOBAL VARIABLES
 ******************************* */
+//JavaScript
+const randomDefault = ['Let\'s do something', 'How about studying?', 'Wanna set a goal?', 'Nothing added! You forgot!!', 'How about a nap', 'How about hiking?', 'How about eating out?', 'How about exercise?', 'How about going abroad?', 'How about rating us?']
 
+// ---------------------------Container Page-------------------------------
 const addItemInput = document.querySelector('.add-item-input');
 const addItemBtn = document.querySelector('.add-item-btn');
+
 const hideAllCheck = document.querySelector('.hide-all-check');
 const clearAllBtn = document.querySelector('.clear-all-btn');
 
 const itemsHolder = document.querySelector('.items-holder');
-
-const randomDefault = ['Let\'s do something', 'How about studying?', 'Wanna set a goal?', 'Nothing added! You forgot!!', 'How about a nap', 'How about hiking?', 'How about eating out?', 'How about exercise?', 'How about going abroad?', 'How about rating us?']
+// -----------------------------------------------------------------------------
 
 /* *******************************
 .         FUNCTIONS TO-BE-USED
@@ -29,6 +32,12 @@ function oddEvenDesign(){
           }
      }
 }
+
+
+
+
+
+
 /* --------------------------------------------------------
 .              REAL JavaScript STARTS
 --------------------------------------------------------- */
