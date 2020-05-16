@@ -29,6 +29,8 @@ function oddEvenDesign(){
      for(let i=0; i<itemsArr.length; i++){
           if(i%2 !== 0){
                itemsArr[i].classList.add('even-item');
+          }else{
+               itemsArr[i].classList.remove('even-item');
           }
      }
 }
