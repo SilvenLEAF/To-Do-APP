@@ -28,3 +28,19 @@ body{
 
      background: var(--containerBG);
 }
+
+
+/* ++++++++++++++++++++++
+.                   NEW TASK PAGE
+++++++++++++++++++++++ */
+.new-task-page{
+     position: fixed;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+
+     background: var(--containerBG);
+
+     display: none;
+}

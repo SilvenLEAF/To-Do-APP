@@ -6,6 +6,11 @@ const appBanner = document.querySelector('.app-banner');
 
 let searchInputVisible = false;
 
+const newTaskBackBtn = document.querySelector('.new-task-back-btn');
+const addBtn = document.querySelector('.add-btn');
+const container = document.querySelector('.container');
+const newTaskPage = document.querySelector('.new-task-page');
+
 // ---------------Hamburger
 ham.addEventListener('click', ()=>{
      ham.classList.toggle('clicked');
@@ -25,4 +30,28 @@ searchBtn.addEventListener('click', ()=>{
 
           searchInputVisible = true;
      }
+})
+
+
+
+//--------------------------New Task Back Button
+newTaskBackBtn.addEventListener('click', ()=>{
+
+     setTimeout(()=>{
+          newTaskPage.style.display = 'none';
+          container.style.display = 'block';
+     }, 100)
+     
+})
+
+
+
+//--------------------------ADD Button
+addBtn.addEventListener('click', ()=>{
+
+     setTimeout(()=>{
+          newTaskPage.style.display = 'block';
+          container.style.display = 'none';
+     }, 100)
+
 })

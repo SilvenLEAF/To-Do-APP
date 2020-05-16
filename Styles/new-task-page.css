@@ -1,0 +1,141 @@
+/* ++++++++++++++++++++
+.                      HEAD
+++++++++++++++++++++ */
+
+/* ------------Heading */
+.new-task-heading{
+     font-size:  170%;
+}
+
+
+
+/* ----------------Save Button */
+.save-btn, .new-task-back-btn{
+     height: 40px;
+     width: 60px;
+
+     border-top-left-radius: 15px;
+     border-bottom-right-radius: 15px;
+
+     margin-top: 5px;
+     margin-left: 20px;
+
+     color: #fff;
+     font-size: 130%;
+     font-weight: bold;
+     user-select: none;
+
+     background: #008b8b;
+     box-shadow: 3px 3px 6px rgba(255, 255, 255, 0.2),
+                         -3px -3px 6px rgba(0, 0, 0, 0.1);
+
+     display: flex;
+     align-items: center;
+     justify-content: center;
+
+     position: fixed;
+     top: 10px;
+     right: 10px;
+}
+.save-btn:active, .new-task-back-btn:active{
+     font-size: 110%;
+
+     box-shadow: inset -3px -3px 6px rgba(255, 255, 255, 0.2),
+                          inset 3px 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* ----------------Back Button */
+.new-task-back-btn{
+     position: fixed;
+     top: 10px;
+     left: 10px;
+}
+
+
+
+
+
+/* ++++++++++++++++++++
+.             NEW TASK MAIN
+++++++++++++++++++++ */
+.new-task-main{
+     position: fixed;
+     top: 70px;
+     bottom: 0;
+     left: 0;
+     right: 0;
+
+     overflow: auto;
+
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-flow: column;
+}
+
+
+/* ----------------------Input Holder and Inputs */
+.new-task-input-holder{
+     margin-top: 25px;
+     padding: 20px;
+
+     width: 80vw;
+     background: darkcyan;
+     border: 0.5px solid rgba(0, 0, 0, 0.3);
+
+     border-top-left-radius: 20px;
+     border-bottom-right-radius: 20px;
+
+     box-shadow: -6px 6px 6px rgba(0, 0, 0, 0.3);
+
+     display: flex;
+     justify-content: center;
+     align-items: center;
+
+     flex-flow: column;
+}
+label{
+     margin: 10px;
+     font-size: 130%;
+     font-weight: 500;
+}
+input[type='date'], input[type='time']{
+     height: 30px;
+     width: 200px;
+
+     border: 0.5px solid rgba(0, 0, 0, 0.3);
+     border-top-left-radius: 20px;
+     border-bottom-right-radius: 20px;
+     background: #fff;
+     outline: none;
+
+
+     color: #f00;
+     font-weight: bolder;
+     font-size: 130%;
+
+     padding-left: 30px;
+
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+.new-task-input-holder input[type='text']{
+     height: 30px;
+     width: 80%;
+     max-width: 400px;
+
+     border: 0.5px solid rgba(0, 0, 0, 0.3);
+     border-top-left-radius: 20px;
+     border-bottom-right-radius: 20px;
+     background: #fff;
+     outline: none;
+
+     color: purple;
+     font-weight: bolder;
+     /* font-size: 130%; */
+     text-align: center;
+}
