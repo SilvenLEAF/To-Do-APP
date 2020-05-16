@@ -77,8 +77,18 @@
 
 
 /* ----------------------Input Holder and Inputs */
+.new-task-all-inputs-holder{
+     position: fixed;
+     top: 70px;
+     left: 0;
+     bottom: 0;
+     right: 0;
+
+     overflow: auto;
+}
+
 .new-task-input-holder{
-     margin-top: 25px;
+     margin: 25px;
      padding: 20px;
 
      width: 80vw;
