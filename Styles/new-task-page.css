@@ -149,3 +149,33 @@ input[type='date'], input[type='time']{
      /* font-size: 130%; */
      text-align: center;
 }
+
+
+/* ++++++++++++++++ */
+.new-task-clear-all-btn{
+     margin: 0 auto;
+     margin-bottom: 10px;
+
+     width: 70px;
+     padding: 15px;
+
+     background: var(--containerBG);
+     border-top-left-radius: 20px;
+     border-bottom-right-radius: 20px;
+
+     color: darkcyan;
+     font-weight: bolder;
+     letter-spacing: 1.5px;
+
+     box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.1),
+                         -6px -6px 6px rgba(255, 255, 255, 0.2);
+
+     text-align: center;
+}
+.new-task-clear-all-btn:active{
+     font-size: 90%;
+
+     box-shadow: inset -3px -3px 6px rgba(255, 255, 255, 0.2),
+                          inset 3px 3px 6px rgba(0, 0, 0, 0.1);
+}
+ 
