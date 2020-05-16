@@ -1,1 +1,274 @@
- 
+/* ++++++++++++++++++++
+.                      HEAD
+++++++++++++++++++++ */
+.head{
+     position: fixed;
+     top: 0px;
+     left: 0;
+     right: 0;
+
+     height: 70px;
+     background: darkcyan;
+     box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.3);
+
+     display: flex;
+     justify-content: center;
+     align-items: center;
+
+     color: #fff;
+}
+
+
+
+/* ---------hamburger */
+.hamburger{
+     width: 50px;
+     position: relative;
+
+     position: fixed;
+     top: 0;
+     left: 0;
+}
+.hamburger > div{
+     content: "";
+     display: block;
+
+     height: 5px;
+     margin: 7px;
+     border-radius: 10px;
+
+     background: #fff;
+     transition: 0.4s ease;
+}
+.hamburger.clicked .ham-t{
+     transform: translateY(12px) rotate(-135deg);
+}
+.hamburger.clicked .ham-b{
+     transform: translateY(-12px) rotate(135deg);
+}
+.hamburger.clicked .ham-m{
+     transform: scale(0);
+}
+
+
+
+/* ---------Search */
+.search{
+     position: fixed;
+     top: 0;
+     right: 10px;
+
+     height: 50px;
+
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+.search-input{
+     margin: 0;
+     padding: 0;
+     height: 30px;
+     width: 60vw;
+     padding-left: 20px;
+
+     border: none;
+     outline: none;
+     background: none;
+     border-bottom: 2px solid #fff;
+
+     color: #fff;
+     font-size: 120%;
+     font-weight: bolder;
+     font-family: "Dosis";
+
+     display: none;
+}
+.search-btn{
+     margin: 20px;
+     width: 40px;
+     height: 40px;
+     border-radius: 50%;
+
+     display: flex;
+     justify-content: center;
+     align-items: center;
+
+     color: #fff;
+     font-size: 170%;
+     font-weight: bold;
+
+     background: #008b8b;
+     box-shadow: 3px 3px 6px rgba(255, 255, 255, 0.2),
+                         -3px -3px 6px rgba(0, 0, 0, 0.1);
+
+}
+.search-btn:active{
+     font-size: 140%;
+
+     box-shadow: inset -3px -3px 6px rgba(255, 255, 255, 0.2),
+                          inset 3px 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+/* ++++++++++++++++++++
+.                      FOOT
+++++++++++++++++++++ */
+.foot{
+     position: fixed;
+     bottom: 0;
+     left: 0;
+     right: 0;
+
+     height: 70px;
+     background: darkcyan;
+     box-shadow: 0px -5px 6px rgba(0, 0, 0, 0.3);
+
+     display: flex;
+     justify-content: center;
+}
+
+
+
+/* ----------------Quick Input */
+.quick-task{
+     height: 25px;
+     width: 70vw;
+     margin-top: 5px;
+
+     background: none;
+     border: none;
+     outline: none;
+     border-bottom: 2px solid #fff;
+
+     color: #ffff;
+     padding-left: 20px;
+}
+.quick-task::placeholder{
+     color: #fff;
+     opacity: 0.5;
+     font-weight: bold;;
+}
+
+
+
+/* -----------Sub Add */
+.sub-add-btn{
+     height: 40px;
+     width: 60px;
+
+     border-top-left-radius: 15px;
+     border-bottom-right-radius: 15px;
+
+     margin-top: 5px;
+     margin-left: 20px;
+
+     color: #fff;
+     font-size: 130%;
+     font-weight: bold;
+     user-select: none;
+
+     background: #008b8b;
+     box-shadow: 3px 3px 6px rgba(255, 255, 255, 0.2),
+                         -3px -3px 6px rgba(0, 0, 0, 0.1);
+
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+.sub-add-btn:active{
+     font-size: 110%;
+
+     box-shadow: inset -3px -3px 6px rgba(255, 255, 255, 0.2),
+                          inset 3px 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+/* ++++++++++++++++++++
+.                       MAIN
+++++++++++++++++++++ */
+.main{
+     position: fixed;
+     top: 70px;
+     bottom: 70px;
+     left: 0;
+     right: 0;
+
+     height: calc(100vh - 140px);
+     overflow: auto;
+
+     position: relative;
+}
+
+
+
+/* ---------------LOGO */
+.logo-holder{
+     height: 100%;
+     width: 100%;
+
+     display: flex;
+     justify-content: center;
+     align-items: center;
+
+     position: absolute;
+     z-index: -1;
+}
+#logo{
+     width: 200px;
+     height: auto;
+
+     position: relative;
+     top: -25px;
+
+     opacity: 0.2;
+}
+
+
+
+/* ------------------ADD Button */
+.add-btn{
+     width: 65px;
+     height: 65px;
+     border-radius: 50%;
+
+     background: #008b8b;
+     position: fixed;
+     right: 30px;
+     bottom: 100px;
+
+     display: flex;
+     align-items: center;
+     justify-content: center;
+
+     font-size: 200%;
+     color: #ddd;
+
+     box-shadow: 1px 1px 1px #008b8b,
+                          2px 2px 2px #007a7a,
+                          3px 3px 3px #006969,
+                          4px 4px 4px #005858,
+                          5px 5px 5px #004747,
+                          6px 6px 6px #003636,
+                          7px 7px 7px #002525,
+                          8px 8px 8px #001414,
+                          9px 9px 9px #000303,
+                          10px 10px 10px #000;
+}
+.add-btn:active{
+     right: 27px;
+     bottom: 97px;
+     box-shadow: 1px 1px 1px #008b8b,
+                          2px 2px 2px #007a7a,
+                          3px 3px 3px #006969,
+                          4px 4px 4px #005858,
+                          5px 5px 5px #004747,
+                          6px 6px 6px #003636,
+                          7px 7px 7px #003636;
+
+}
