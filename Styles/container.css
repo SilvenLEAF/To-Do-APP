@@ -24,10 +24,6 @@
 .hamburger{
      width: 50px;
      position: relative;
-
-     position: fixed;
-     top: 10px;
-     left: 0;
 }
 .hamburger > div{
      content: "";
@@ -49,6 +45,26 @@
 .hamburger.clicked .ham-m{
      transform: scale(0);
 }
+
+
+
+.ham-plate{
+     width: 50px;
+     position: fixed;
+     top: 10px;
+     left: 10px;
+
+     box-shadow: -3px -3px 3px rgba(255, 255, 255, 0.2),
+                         3px 3px 3px rgba(0, 0, 0, 0.1);
+}
+.ham-plate:active{
+     box-shadow: inset -3px -3px 3px rgba(255, 255, 255, 0.2),
+                         inset 3px 3px 3px rgba(0, 0, 0, 0.1);
+}
+.ham-plate:active .hamburger{
+     transform: scale(0.8);
+}
+
 
 
 
@@ -98,15 +114,15 @@
      font-weight: bold;
 
      background: #008b8b;
-     box-shadow: 3px 3px 6px rgba(255, 255, 255, 0.2),
-                         -3px -3px 6px rgba(0, 0, 0, 0.1);
+     box-shadow: -3px -3px 3px rgba(255, 255, 255, 0.2),
+                         3px 3px 3px rgba(0, 0, 0, 0.1);
 
 }
 .search-btn:active{
      font-size: 140%;
 
-     box-shadow: inset -3px -3px 6px rgba(255, 255, 255, 0.2),
-                          inset 3px 3px 6px rgba(0, 0, 0, 0.1);
+     box-shadow: inset -3px -3px 3px rgba(255, 255, 255, 0.2),
+                         inset 3px 3px 3px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -171,8 +187,8 @@
      user-select: none;
 
      background: #008b8b;
-     box-shadow: 3px 3px 6px rgba(255, 255, 255, 0.2),
-                         -3px -3px 6px rgba(0, 0, 0, 0.1);
+     box-shadow: -3px -3px 3px rgba(255, 255, 255, 0.2),
+                         3px 3px 3px rgba(0, 0, 0, 0.1);
 
      display: flex;
      align-items: center;
@@ -181,8 +197,8 @@
 .sub-add-btn:active{
      font-size: 110%;
 
-     box-shadow: inset -3px -3px 6px rgba(255, 255, 255, 0.2),
-                          inset 3px 3px 6px rgba(0, 0, 0, 0.1);
+     box-shadow: inset -3px -3px 3px rgba(255, 255, 255, 0.2),
+                         inset 3px 3px 3px rgba(0, 0, 0, 0.1);
 }
 
 
