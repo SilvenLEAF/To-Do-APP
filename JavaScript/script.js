@@ -1,24 +1,37 @@
+//JavaScript
+let navOpen = false;
+let searchInputVisible = false;
 
+//++++++++++++++CONTAINER PAGE
+const container = document.querySelector('.container');
+
+//add button (Page Change)
+const addBtn = document.querySelector('.add-btn');
+
+//nav related
 const hamPlate = document.querySelector('.ham-plate');
 const ham = document.querySelector('.hamburger');
 const nav = document.querySelector('.nav');
 
+//footer elements
 const quickTaskInput = document.querySelector('.quick-task');
 const subAddBtn = document.querySelector('.sub-add-btn');
 const copyright = document.querySelector('.copyright');
-let navOpen = false;
 
+//search related
 const searchBtn = document.querySelector('.search-btn');
 const searchInput = document.querySelector('.search-input');
 const appBanner = document.querySelector('.app-banner');
 
-let searchInputVisible = false;
 
-const newTaskBackBtn = document.querySelector('.new-task-back-btn');
-const addBtn = document.querySelector('.add-btn');
-const container = document.querySelector('.container');
+
+
+
+//++++++++++++++NEW TASK PAGE
 const newTaskPage = document.querySelector('.new-task-page');
 
+//back button (Page Change)
+const newTaskBackBtn = document.querySelector('.new-task-back-btn');
 
 
 
@@ -26,12 +39,29 @@ const newTaskPage = document.querySelector('.new-task-page');
 
 
 
+/* ***********************************
+.              REAL JavaScript STARTS
+*********************************** */
+
+/* -----------------------------------------------------
+.                    CONTAINER PAGE
+----------------------------------------------------- */
+
+//--------------------------ADD Button
+addBtn.addEventListener('click', ()=>{
+
+     setTimeout(()=>{
+          newTaskPage.style.display = 'block';
+          container.style.display = 'none';
+     }, 100)
+
+})
 
 
 
 // ---------------Hamburger
-
 hamPlate.addEventListener('click', ()=>{
+
      if(navOpen){
           navOpen = false;
           ham.classList.remove('clicked');
@@ -56,8 +86,10 @@ hamPlate.addEventListener('click', ()=>{
 })
 
 
+
 // -------------------Search Button
 searchBtn.addEventListener('click', ()=>{
+
      if(searchInputVisible){
           searchInput.style.display = 'none';
           appBanner.style.display = 'block';
@@ -69,9 +101,16 @@ searchBtn.addEventListener('click', ()=>{
 
           searchInputVisible = true;
      }
+
 })
 
 
+
+
+
+/* -----------------------------------------------------
+.                    NEW TASK PAGE
+----------------------------------------------------- */
 
 //--------------------------New Task Back Button
 newTaskBackBtn.addEventListener('click', ()=>{
@@ -79,18 +118,6 @@ newTaskBackBtn.addEventListener('click', ()=>{
      setTimeout(()=>{
           newTaskPage.style.display = 'none';
           container.style.display = 'block';
-     }, 100)
-
-})
-
-
-
-//--------------------------ADD Button
-addBtn.addEventListener('click', ()=>{
-
-     setTimeout(()=>{
-          newTaskPage.style.display = 'block';
-          container.style.display = 'none';
      }, 100)
 
 })

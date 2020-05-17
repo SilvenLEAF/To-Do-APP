@@ -8,7 +8,7 @@
      right: 0;
 
      height: 70px;
-     background: darkcyan;
+     background: var(--mainColor);
      box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.3);
 
      display: flex;
@@ -111,7 +111,7 @@
      font-size: 170%;
      font-weight: bold;
 
-     background: #008b8b;
+     background: var(--mainColor);
      box-shadow: -3px -3px 3px rgba(255, 255, 255, 0.2),
                          3px 3px 3px rgba(0, 0, 0, 0.1);
 
@@ -137,7 +137,7 @@
      right: 0;
 
      height: 70px;
-     background: darkcyan;
+     background: var(--mainColor);
      box-shadow: 0px -5px 6px rgba(0, 0, 0, 0.3);
 
      display: flex;
@@ -199,7 +199,7 @@
      font-weight: bold;
      user-select: none;
 
-     background: #008b8b;
+     background: var(--mainColor);
      box-shadow: -3px -3px 3px rgba(255, 255, 255, 0.2),
                          3px 3px 3px rgba(0, 0, 0, 0.1);
 
@@ -229,8 +229,7 @@
      right: 0;
      z-index: 0;
 
-     overflow: hidden;
-
+     overflow: auto;
 }
 
 
@@ -266,7 +265,7 @@
      height: 65px;
      border-radius: 50%;
 
-     background: #008b8b;
+     background: var(--mainColor);
      position: fixed;
      right: 30px;
      bottom: 100px;
@@ -304,7 +303,6 @@
 
 
 
-
 /* -----------------------Navigation */
 .nav.nav-open{
      transform: translateX(0px);
@@ -327,7 +325,7 @@
      transition: 0.4s ease;
 
      width: 70px;
-     background: darkcyan;
+     background: var(--mainColor);
 
      display: flex;
      justify-content: space-around;
@@ -345,7 +343,7 @@
      color: #fff;
      font-size: 150%;
 
-     background: #008b8b;
+     background: var(--mainColor);
 
      display: flex;
      align-items: center;
@@ -365,10 +363,9 @@
 
 
 
-/* ------------------------*TO DO LIST DIV */
-.to-do-list-div{
+/* ------------------------*TASK DIVS */
+.task-div{
      margin: 20px;
-     /* height: 20px; */
      padding: 10px;
      display: flex;
      flex-flow: column;
@@ -379,36 +376,24 @@
                          3px 3px 3px rgba(0, 0, 0, 0.1);
 
 }
-.to-do-list-div:active{
+.task-div:active{
      box-shadow: inset -3px -3px 3px rgba(255, 255, 255, 0.2),
                          inset 3px 3px 3px rgba(0, 0, 0, 0.1);
 
 }
 
-.to-do-list-div > div{
+.task-div > div{
      display: flex;
      flex-flow: row;
 }
-.to-do-list-div > div > div{
+.task-div > div > div{
      margin-left: 10px;
 }
-.to-do-check{
+.task-check{
      margin-top: 0;
      width: 20px;
      height: 20px;
 }
-.list-lower-part > div{
+.task-lower-part > div{
      color: red;
-}
-
-
-
-
-
-
-
-.lists-holder{
-     height: 100%;
-     width: 100%;
-     overflow: auto;
 }
