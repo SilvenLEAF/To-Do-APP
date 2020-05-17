@@ -1,9 +1,150 @@
+
+/* ***********************************
+.        ALL TO BE USED FUNCTIONS
+*********************************** */
+
+function createTask() {
+
+
+     //creating Task Div
+     const taskDivBorn = document.createElement('div');
+          taskDivBorn.classList.add('task-div');
+
+     const taskUpperPartBorn = document.createElement('div');
+          taskUpperPartBorn.classList.add('task-upper-part');
+
+     const taskSlBorn = document.createElement('div');
+          taskSlBorn.classList.add('sl');
+     const taskTitleBorn = document.createElement('div');
+          taskTitleBorn.classList.add('task-title');
+
+     const taskCheckHolderBorn = document.createElement('div');
+          taskCheckHolderBorn.classList.add('task-check-holder');
+     const taskCheckBorn = document.createElement('input');
+          taskCheckBorn.setAttribute('type', 'checkbox');
+          taskCheckBorn.classList.add('task-check');
+
+     const taskLowerPartBorn = document.createElement('div');
+          taskLowerPartBorn.classList.add('task-lower-part');
+     const taskTimeBorn = document.createElement('div');
+          taskTimeBorn.classList.add('time')
+     const taskDateBorn = document.createElement('div');
+          taskDateBorn.classList.add('date');
+     const taskTimerBorn = document.createElement('div');
+          taskTimerBorn.classList.add('timer');
+
+
+
+     //appending themselves
+     taskDivBorn.appendChild(taskUpperPartBorn);
+     taskDivBorn.appendChild(taskLowerPartBorn);
+
+     taskLowerPartBorn.appendChild(taskTimeBorn);
+     taskLowerPartBorn.appendChild(taskDateBorn);
+     taskLowerPartBorn.appendChild(taskTimerBorn);
+
+     taskUpperPartBorn.appendChild(taskSlBorn);
+     taskUpperPartBorn.appendChild(taskCheckHolderBorn);
+     taskUpperPartBorn.appendChild(taskTitleBorn);
+
+     taskCheckHolderBorn.appendChild(taskCheckBorn);
+
+     //giving inputs
+     taskSlBorn.textContent = 00;
+     taskDateBorn.textContent = taskDateInput.value;
+     taskTimeBorn.textContent = taskTimeInput.value;
+
+
+     //-----------task title input
+     if(taskTitleInput.value){
+          taskTitleBorn.textContent = taskTitleInput.value;
+     }else{
+          let randomSuggestionsNum = Math.floor(Math.random() * suggestions.length);
+          let randomSuggestions = suggestions[randomSuggestionsNum];
+
+          taskTitleBorn.style.fontStyle = 'italic';
+          taskTitleBorn.style.fontSize = '80%';
+          taskTitleBorn.textContent = randomSuggestions;
+     }
+
+     if(taskDateInput.value === '' && taskTimeInput.value === ''){
+          taskTimerBorn.value = '';
+     }else{
+          taskTimerBorn.textContent = '00d 00h 00m 00s';
+     }
+
+     //appending in the DOM
+     tasksHolder.appendChild(taskDivBorn);
+
+     taskTimeInput.value = '';
+     quickTaskInput.value = '';
+
+}
+
+function clearAll() {
+     taskTitleInput.value = '';
+     taskDateInput.value = '';
+     taskTimeInput.value = '';
+     quickTaskInput.value ='';
+}
+
+function clearAllTasks() {
+     let allTasksArr = document.querySelectorAll('.task-div');
+     for(let i=0; i<allTasksArr.length; i++){
+          allTasksArr[i].remove();
+     }
+}
+
+function numbering() {
+     let allSlArr = document.querySelectorAll('.sl');
+     for(let i=0; i<allSlArr.length; i++){
+          let slNum = i + 1;
+          slNum = (slNum < 10) ? `0${slNum}` : slNum;
+
+          allSlArr[i].textContent = slNum;
+     }
+}
+
+function newTaskPageToContainerPage() {
+     setTimeout(()=>{
+          newTaskPage.style.display = 'none';
+          container.style.display = 'block';
+          clearAll();
+     }, 100)
+
+}
+
+function searchFilter() {
+     const searchTerm = searchInput.value.toLowerCase();
+     const allTitlesArr = document.querySelectorAll('.task-title');
+     for(let i=0; i<allTitlesArr.length; i++){
+          const title = allTitlesArr[i].textContent.toLowerCase();
+
+          const searchTargetDiv = allTitlesArr[i].parentElement.parentElement;
+          if(title.indexOf(searchTerm) != -1){
+               searchTargetDiv.style.display = 'flex';
+          } else{
+               searchTargetDiv.style.display = 'none';
+          }
+     }
+}
+
+
+
+
+/* ***********************************
+.              ALL GLOBAL VARIABLES
+*********************************** */
 //JavaScript
 let navOpen = false;
 let searchInputVisible = false;
 
+const suggestions = ['How about hiking?', 'How about exercise?', 'How about studying?', 'How about crafting?', 'How about travelling?', 'How about fishing?', 'How about Golf?', 'How about boating?', 'How about  a stroll?']
+
 //++++++++++++++CONTAINER PAGE
 const container = document.querySelector('.container');
+const main = document.querySelector('.main');
+const tasksHolder = document.querySelector('.tasks-holder');
 
 //add button (Page Change)
 const addBtn = document.querySelector('.add-btn');
@@ -13,12 +154,14 @@ const hamPlate = document.querySelector('.ham-plate');
 const ham = document.querySelector('.hamburger');
 const nav = document.querySelector('.nav');
 
+//--------navs buttons
+const clearAllTasksBtn = document.querySelector('.clear-all-tasks-btn');
 //footer elements
 const quickTaskInput = document.querySelector('.quick-task');
 const subAddBtn = document.querySelector('.sub-add-btn');
 const copyright = document.querySelector('.copyright');
 
-//search related
+   //search related
 const searchBtn = document.querySelector('.search-btn');
 const searchInput = document.querySelector('.search-input');
 const appBanner = document.querySelector('.app-banner');
@@ -39,7 +182,8 @@ const taskTitleInput = document.querySelector('.task-title-input');
 const taskDateInput = document.querySelector('.task-date-input');
 const taskTimeInput = document.querySelector('.task-time-input');
 
-
+//clear all button
+const clearAllBtn = document.querySelector('.clear-all-btn');
 
 
 
@@ -96,6 +240,8 @@ hamPlate.addEventListener('click', ()=>{
 
 // -------------------Search Button
 searchBtn.addEventListener('click', ()=>{
+     searchInput.value ='';
+     searchFilter();
 
      if(searchInputVisible){
           searchInput.style.display = 'none';
@@ -111,6 +257,35 @@ searchBtn.addEventListener('click', ()=>{
 
 })
 
+//---------------------Search Filter
+searchInput.addEventListener('keyup', ()=>{
+          searchFilter();
+})
+
+
+//--------------------------Quick Add Button
+subAddBtn.addEventListener('click', ()=>{
+     taskTitleInput.value = quickTaskInput.value;
+     createTask();
+     numbering();
+});
+
+
+
+//----------------------Clear All Tasks btn
+clearAllTasksBtn.addEventListener('click', ()=>{
+     clearAllTasks();
+})
+
+
+
+//-------------------------Remove Task
+tasksHolder.addEventListener('click', (e)=>{
+     if(e.target.className === 'task-check'){
+          let targetTaskDiv = e.target.parentElement.parentElement.parentElement;
+          targetTaskDiv.remove();
+     }
+})
 
 
 
@@ -122,9 +297,22 @@ searchBtn.addEventListener('click', ()=>{
 //--------------------------New Task Back Button
 newTaskPageBackBtn.addEventListener('click', ()=>{
 
-     setTimeout(()=>{
-          newTaskPage.style.display = 'none';
-          container.style.display = 'block';
-     }, 100)
+     newTaskPageToContainerPage();
 
 })
+
+
+
+//--------------------------New Task Save Button
+saveBtn.addEventListener('click', ()=>{
+     createTask();
+     numbering();
+     newTaskPageToContainerPage();
+});
+
+
+
+//--------------------------Clear All
+clearAllBtn.addEventListener('click', ()=>{
+     clearAll();
+});

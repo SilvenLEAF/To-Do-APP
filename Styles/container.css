@@ -229,9 +229,13 @@
      right: 0;
      z-index: 0;
 
+     overflow: hidden;
+}
+.tasks-holder{
+     width: 100%;
+     height: 100%;
      overflow: auto;
 }
-
 
 
 /* ---------------LOGO */
