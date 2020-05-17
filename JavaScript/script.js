@@ -74,7 +74,7 @@ function createTask() {
      }
 
      //appending in the DOM
-     tasksHolder.appendChild(taskDivBorn);
+     tasksHolder.insertBefore(taskDivBorn, tasksHolder.firstChild);
 
      taskTimeInput.value = '';
      quickTaskInput.value = '';
