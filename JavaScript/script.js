@@ -31,7 +31,14 @@ const appBanner = document.querySelector('.app-banner');
 const newTaskPage = document.querySelector('.new-task-page');
 
 //back button (Page Change)
-const newTaskBackBtn = document.querySelector('.new-task-back-btn');
+const newTaskPageBackBtn = document.querySelector('.new-task-page-back-btn');
+
+//save button
+const saveBtn = document.querySelector('.save-btn');
+const taskTitleInput = document.querySelector('.task-title-input');
+const taskDateInput = document.querySelector('.task-date-input');
+const taskTimeInput = document.querySelector('.task-time-input');
+
 
 
 
@@ -113,7 +120,7 @@ searchBtn.addEventListener('click', ()=>{
 ----------------------------------------------------- */
 
 //--------------------------New Task Back Button
-newTaskBackBtn.addEventListener('click', ()=>{
+newTaskPageBackBtn.addEventListener('click', ()=>{
 
      setTimeout(()=>{
           newTaskPage.style.display = 'none';

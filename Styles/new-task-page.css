@@ -3,14 +3,14 @@
 ++++++++++++++++++++ */
 
 /* ------------Heading */
-.new-task-heading{
+.new-task-page-heading{
      font-size:  170%;
 }
 
 
 
 /* ----------------Save Button */
-.save-btn, .new-task-back-btn{
+.save-btn, .new-task-page-back-btn{
      height: 40px;
      width: 60px;
 
@@ -37,7 +37,7 @@
      top: 10px;
      right: 10px;
 }
-.save-btn:active, .new-task-back-btn:active{
+.save-btn:active, .new-task-page-back-btn:active{
      font-size: 110%;
 
      box-shadow: inset -3px -3px 3px rgba(255, 255, 255, 0.3),
@@ -47,7 +47,7 @@
 
 
 /* ----------------Back Button */
-.new-task-back-btn{
+.new-task-page-back-btn{
      position: fixed;
      top: 10px;
      left: 10px;
@@ -60,7 +60,7 @@
 /* ++++++++++++++++++++
 .             NEW TASK MAIN
 ++++++++++++++++++++ */
-.new-task-main{
+.new-task-page-main{
      position: fixed;
      top: 70px;
      bottom: 0;
@@ -77,7 +77,7 @@
 
 
 /* ----------------------Input Holder and Inputs */
-.new-task-all-inputs-holder{
+.new-task-page-all-inputs-holder{
      position: fixed;
      top: 70px;
      left: 0;
@@ -87,7 +87,7 @@
      overflow: auto;
 }
 
-.new-task-input-holder{
+.new-task-page-input-holder{
      margin: 25px;
      padding: 20px;
 
@@ -133,7 +133,7 @@ input[type='date'], input[type='time']{
      align-items: center;
 }
 
-.new-task-input-holder input[type='text']{
+.new-task-page-input-holder input[type='text']{
      height: 30px;
      width: 80%;
      max-width: 400px;
@@ -151,7 +151,7 @@ input[type='date'], input[type='time']{
 
 
 /* ++++++++++++++++ */
-.new-task-clear-all-btn{
+.clear-all-tasks-btn{
      margin: 0 auto;
      margin-bottom: 10px;
 
@@ -171,7 +171,7 @@ input[type='date'], input[type='time']{
 
      text-align: center;
 }
-.new-task-clear-all-btn:active{
+.new-task-page-clear-all-btn:active{
      font-size: 90%;
 
      box-shadow: inset -3px -3px 3px rgba(255, 255, 255, 0.2),
