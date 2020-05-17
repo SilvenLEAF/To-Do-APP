@@ -287,10 +287,8 @@
                           4px 4px 4px #005858,
                           5px 5px 5px #004747,
                           6px 6px 6px #003636,
-                          7px 7px 7px #002525,
-                          8px 8px 8px #001414,
-                          9px 9px 9px #000303,
-                          10px 10px 10px #000;
+                          7px 7px 7px #002525;
+
 }
 .add-btn:active{
      right: 27px;
@@ -298,11 +296,7 @@
      box-shadow: 1px 1px 1px #008b8b,
                           2px 2px 2px #007a7a,
                           3px 3px 3px #006969,
-                          4px 4px 4px #005858,
-                          5px 5px 5px #004747,
-                          6px 6px 6px #003636,
-                          7px 7px 7px #003636;
-
+                          4px 4px 4px #005858;
 }
 
 
