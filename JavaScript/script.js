@@ -1,4 +1,3 @@
-const main = document.querySelector('.main');
 
 const hamPlate = document.querySelector('.ham-plate');
 const ham = document.querySelector('.hamburger');
@@ -42,7 +41,6 @@ hamPlate.addEventListener('click', ()=>{
           subAddBtn.style.display = 'flex';
           copyright.style.display = 'none';
 
-          main.style.zIndex = '0';
 
      }else{
           navOpen = true;
@@ -53,7 +51,6 @@ hamPlate.addEventListener('click', ()=>{
           subAddBtn.style.display = 'none';
           copyright.style.display = 'flex';
 
-          main.style.zIndex = '15';
      }
 
 })

@@ -229,10 +229,8 @@
      right: 0;
      z-index: 0;
 
-     height: calc(100vh - 140px);
-     overflow: auto;
+     overflow: hidden;
 
-     position: relative;
 }
 
 
@@ -319,15 +317,16 @@
      100%{transform: translateX(0px)}
 }
 .nav{
-     position: absolute;
-     top: 0px;
+     position: fixed;
+     top: 70px;
      left: 0;
+     bottom: 70px;
+     z-index: 100;
 
      transform: translateX(-100px);
      transition: 0.4s ease;
 
      width: 70px;
-     height: 100%;
      background: darkcyan;
 
      display: flex;
@@ -362,4 +361,54 @@
 
      box-shadow: inset -3px -3px 3px rgba(255, 255, 255, 0.2),
                          inset 3px 3px 3px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* ------------------------*TO DO LIST DIV */
+.to-do-list-div{
+     margin: 20px;
+     /* height: 20px; */
+     padding: 10px;
+     display: flex;
+     flex-flow: column;
+
+     border-bottom-right-radius: 20px;
+     border-top-left-radius: 20px;
+     box-shadow: -3px -3px 3px rgba(255, 255, 255, 0.2),
+                         3px 3px 3px rgba(0, 0, 0, 0.1);
+
+}
+.to-do-list-div:active{
+     box-shadow: inset -3px -3px 3px rgba(255, 255, 255, 0.2),
+                         inset 3px 3px 3px rgba(0, 0, 0, 0.1);
+
+}
+
+.to-do-list-div > div{
+     display: flex;
+     flex-flow: row;
+}
+.to-do-list-div > div > div{
+     margin-left: 10px;
+}
+.to-do-check{
+     margin-top: 0;
+     width: 20px;
+     height: 20px;
+}
+.list-lower-part > div{
+     color: red;
+}
+
+
+
+
+
+
+
+.lists-holder{
+     height: 100%;
+     width: 100%;
+     overflow: auto;
 }
