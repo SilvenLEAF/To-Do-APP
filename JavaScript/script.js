@@ -329,6 +329,8 @@ tasksHolder.addEventListener('click', (e)=>{
      if(e.target.className === 'task-check'){
           let targetTaskDiv = e.target.parentElement.parentElement.parentElement;
           targetTaskDiv.remove();
+
+          numbering();
      }
 })
 
