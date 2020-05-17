@@ -2,7 +2,43 @@
 /* ***********************************
 .        ALL TO BE USED FUNCTIONS
 *********************************** */
+setInterval(()=>{
+     timeBomb();
+}, 500)
 
+function  timeBomb(){
+     let timerStroageArr = document.querySelectorAll('.timer-storage');
+     let timerArr = document.querySelectorAll('.timer');
+
+     for(let i=0; i<timerStroageArr.length; i++){
+          if(timerStroageArr[i].textContent){
+               let targetDate = new Date(timerStroageArr[i].textContent);
+               let today = new Date();
+               let diff = targetDate.getTime() - today.getTime();
+
+
+          let daysRem = diff%dayDivisor;
+          let hrsRem = daysRem% hrsDivisor;
+          let minsRem = hrsRem%minsDivisor;
+
+          let days = Math.floor(diff/dayDivisor);
+          let hrs = Math.floor(daysRem/hrsDivisor);
+          let mins = Math.floor((hrsRem%hrsDivisor)/minsDivisor);
+          let secs = Math.floor((minsRem%hrsDivisor)/1000);
+
+          days = (days<10) ? `0${days}` : days;
+          hrs = (hrs<10) ? `0${hrs}` : hrs;
+          secs = (secs<10) ? `0${secs}` : secs;
+
+          if(diff>0){
+               timerArr[i].textContent = `${days}d ${hrs}h ${mins}m ${secs}s`;
+          }else{
+               timerArr[i].textContent = `Time Expired`;
+          }
+          }
+     }
+
+}
 function createTask() {
 
 
@@ -32,6 +68,8 @@ function createTask() {
           taskDateBorn.classList.add('date');
      const taskTimerBorn = document.createElement('div');
           taskTimerBorn.classList.add('timer');
+          const taskTimerStorageBorn = document.createElement('div');
+               taskTimerStorageBorn.classList.add('timer-storage');
 
 
 
@@ -42,6 +80,8 @@ function createTask() {
      taskLowerPartBorn.appendChild(taskTimeBorn);
      taskLowerPartBorn.appendChild(taskDateBorn);
      taskLowerPartBorn.appendChild(taskTimerBorn);
+     taskLowerPartBorn.appendChild(taskTimerStorageBorn);
+
 
      taskUpperPartBorn.appendChild(taskSlBorn);
      taskUpperPartBorn.appendChild(taskCheckHolderBorn);
@@ -70,7 +110,8 @@ function createTask() {
      if(taskDateInput.value === '' && taskTimeInput.value === ''){
           taskTimerBorn.value = '';
      }else{
-          taskTimerBorn.textContent = '00d 00h 00m 00s';
+          taskTimerStorageBorn.textContent = taskDateInput.value;
+          timeBomb();
      }
 
      //appending in the DOM
@@ -138,6 +179,10 @@ function searchFilter() {
 //JavaScript
 let navOpen = false;
 let searchInputVisible = false;
+
+const dayDivisor = 1000*60*60*24;
+const hrsDivisor = 1000*60*60;
+const minsDivisor = 1000*60;
 
 const suggestions = ['How about hiking?', 'How about exercise?', 'How about studying?', 'How about crafting?', 'How about travelling?', 'How about fishing?', 'How about Golf?', 'How about boating?', 'How about  a stroll?']
 

@@ -401,3 +401,7 @@
 .task-lower-part > div{
      color: red;
 }
+/* +++++++TIMER STORAGE */
+.timer-storage{
+     display: none;
+}
