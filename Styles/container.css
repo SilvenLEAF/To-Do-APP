@@ -281,22 +281,10 @@
      font-size: 200%;
      color: #ddd;
 
-     box-shadow: 1px 1px 1px #008b8b,
-                          2px 2px 2px var(--mainColor),
-                          3px 3px 3px var(--mainColor),
-                          4px 4px 4px var(--mainColor),
-                          5px 5px 5px var(--mainColor),
-                          6px 6px 6px var(--mainColor),
-                          7px 7px 7px var(--mainColor);
-
 }
 .add-btn:active{
-     right: 27px;
-     bottom: 97px;
-     box-shadow: 1px 1px 1px var(--mainColor),
-                          2px 2px 2px var(--mainColor),
-                          3px 3px 3px var(--mainColor),
-                          4px 4px 4px var(--mainColor);
+     color: #000;
+ 
 }
 
 
