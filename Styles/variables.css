@@ -1,4 +1,11 @@
 :root{
      --containerBG: #ccc;
-     --mainColor: deeppink;
+     --mainColor: darkcyan;
+
+
+     /* -------Settings Color */
+     --color1: orangered;
+     --color2: purple;
+     --color3: black;
+     --color4: #00a;
 }

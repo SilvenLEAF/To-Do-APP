@@ -1,4 +1,54 @@
+function closeNav() {
+     if(navOpen){
+          navOpen = false;
+          ham.classList.remove('clicked');
 
+          nav.classList.remove('nav-open');
+          quickTaskInput.style.display = 'flex';
+          subAddBtn.style.display = 'flex';
+          copyright.style.display = 'none';
+
+
+     }else{
+          navOpen = true;
+          ham.classList.add('clicked');
+
+          nav.classList.add('nav-open');
+          quickTaskInput.style.display = 'none';
+          subAddBtn.style.display = 'none';
+          copyright.style.display = 'flex';
+
+     }
+
+}
+
+function closeSettings() {
+     settingsNavOpen = false;
+     settingsNav.classList.remove('settings-nav-open');
+}
+
+const settingsBtn = document.querySelector('.settings');
+const settingsNav =  document.querySelector('.settings-nav');
+const custom = document.querySelector('.custom');
+const color1 = document.querySelector('.color1');
+const color2 = document.querySelector('.color2');
+const color3 = document.querySelector('.color3');
+const color4 = document.querySelector('.color4');
+const customInput = document.querySelector('.custom-input');
+const customSave = document.querySelector('.custom-save');
+
+let color1BG =getComputedStyle(document.documentElement).getPropertyValue('--color1');
+let color2BG =getComputedStyle(document.documentElement).getPropertyValue('--color2');
+let color3BG =getComputedStyle(document.documentElement).getPropertyValue('--color3');
+let color4BG =getComputedStyle(document.documentElement).getPropertyValue('--color4');
+
+     let customColor ;
+     let customChosen = false;
+
+
+
+
+     
 /* ***********************************
 .        ALL TO BE USED FUNCTIONS
 *********************************** */
@@ -178,6 +228,7 @@ function searchFilter() {
 *********************************** */
 //JavaScript
 let navOpen = false;
+let searchNavOpen = false;
 let searchInputVisible = false;
 
 const dayDivisor = 1000*60*60*24;
@@ -248,7 +299,7 @@ addBtn.addEventListener('click', ()=>{
 
           newTaskPage.style.display = 'block';
           container.style.display = 'none';
- 
+
 
 })
 
@@ -256,29 +307,95 @@ addBtn.addEventListener('click', ()=>{
 
 // ---------------Hamburger
 hamPlate.addEventListener('click', ()=>{
-
-     if(navOpen){
-          navOpen = false;
-          ham.classList.remove('clicked');
-
-          nav.classList.remove('nav-open');
-          quickTaskInput.style.display = 'flex';
-          subAddBtn.style.display = 'flex';
-          copyright.style.display = 'none';
+     closeNav();
+})
 
 
+
+
+
+
+
+
+
+
+// ---------------Settings
+settingsBtn.addEventListener('click', ()=>{
+          settingsNavOpen = true;
+          settingsNav.classList.add('settings-nav-open');
+})
+
+custom.addEventListener('click', ()=>{
+     if (customChosen) {
+          customColor = customInput.value;
+          customChosen = false;
+          document.documentElement.style.setProperty('--mainColor', customColor);
+          closeSettings();
+          closeNav();
+          customInput.style.visibility = 'visible';
+          customSave.style.visibility = 'hidden';
      }else{
-          navOpen = true;
-          ham.classList.add('clicked');
-
-          nav.classList.add('nav-open');
-          quickTaskInput.style.display = 'none';
-          subAddBtn.style.display = 'none';
-          copyright.style.display = 'flex';
+          customChosen = true;
+          customInput.style.visibility = 'hidden';
+          customSave.style.visibility = 'visible';
 
      }
-
 })
+
+color1.addEventListener('click', ()=>{
+     closeSettings();
+     closeNav();
+     document.documentElement.style.setProperty('--mainColor', color1BG);
+})
+
+color2.addEventListener('click', ()=>{
+     closeSettings();
+     closeNav();
+     document.documentElement.style.setProperty('--mainColor', color2BG);
+})
+
+color3.addEventListener('click', ()=>{
+     closeSettings();
+     closeNav();
+     document.documentElement.style.setProperty('--mainColor', color3BG);
+})
+
+color4.addEventListener('click', ()=>{
+     closeSettings();
+     closeNav();
+     document.documentElement.style.setProperty('--mainColor', color4BG);
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
