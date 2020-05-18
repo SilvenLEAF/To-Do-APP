@@ -246,10 +246,9 @@ const clearAllBtn = document.querySelector('.clear-all-btn');
 //--------------------------ADD Button
 addBtn.addEventListener('click', ()=>{
 
-     setTimeout(()=>{
           newTaskPage.style.display = 'block';
           container.style.display = 'none';
-     }, 100)
+ 
 
 })
 
