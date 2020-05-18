@@ -110,6 +110,7 @@ label{
      margin: 10px;
      font-size: 130%;
      font-weight: 500;
+     color: #fff;
 }
 input[type='date'], input[type='time']{
      height: 30px;
