@@ -282,21 +282,21 @@
      color: #ddd;
 
      box-shadow: 1px 1px 1px #008b8b,
-                          2px 2px 2px #050505,
-                          3px 3px 3px #040404,
-                          4px 4px 4px #030303,
-                          5px 5px 5px #020202,
-                          6px 6px 6px #010101,
-                          7px 7px 7px #000;
+                          2px 2px 2px var(--mainColor),
+                          3px 3px 3px var(--mainColor),
+                          4px 4px 4px var(--mainColor),
+                          5px 5px 5px var(--mainColor),
+                          6px 6px 6px var(--mainColor),
+                          7px 7px 7px var(--mainColor);
 
 }
 .add-btn:active{
      right: 27px;
      bottom: 97px;
-     box-shadow: 1px 1px 1px #008b8b,
-                          2px 2px 2px #050505,
-                          3px 3px 3px #040404,
-                          4px 4px 4px #030303;
+     box-shadow: 1px 1px 1px var(--mainColor),
+                          2px 2px 2px var(--mainColor),
+                          3px 3px 3px var(--mainColor),
+                          4px 4px 4px var(--mainColor);
 }
 
 
