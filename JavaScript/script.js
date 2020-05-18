@@ -24,6 +24,9 @@ function closeNav() {
 
 function closeSettings() {
      customChosen = false;
+     customInput.style.visibility = 'visible';
+     customSave.style.visibility = 'hidden';
+
      settingsNavOpen = false;
      settingsNav.classList.remove('settings-nav-open');
 }
