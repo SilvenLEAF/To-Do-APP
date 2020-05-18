@@ -308,6 +308,7 @@ addBtn.addEventListener('click', ()=>{
 // ---------------Hamburger
 hamPlate.addEventListener('click', ()=>{
      closeNav();
+     closeSettings();
 })
 
 
