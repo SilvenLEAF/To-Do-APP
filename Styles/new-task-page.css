@@ -88,7 +88,7 @@
 }
 
 .new-task-page-input-holder{
-     margin: 25px;
+     margin: 25px auto;
      padding: 20px;
 
      width: 80vw;
