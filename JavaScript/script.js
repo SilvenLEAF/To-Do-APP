@@ -23,6 +23,7 @@ function closeNav() {
 }
 
 function closeSettings() {
+     customChosen = false;
      settingsNavOpen = false;
      settingsNav.classList.remove('settings-nav-open');
 }
