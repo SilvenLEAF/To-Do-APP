@@ -282,21 +282,21 @@
      color: #ddd;
 
      box-shadow: 1px 1px 1px #008b8b,
-                          2px 2px 2px #007a7a,
-                          3px 3px 3px #006969,
-                          4px 4px 4px #005858,
-                          5px 5px 5px #004747,
-                          6px 6px 6px #003636,
-                          7px 7px 7px #002525;
+                          2px 2px 2px #050505,
+                          3px 3px 3px #040404,
+                          4px 4px 4px #030303,
+                          5px 5px 5px #020202,
+                          6px 6px 6px #010101,
+                          7px 7px 7px #000;
 
 }
 .add-btn:active{
      right: 27px;
      bottom: 97px;
      box-shadow: 1px 1px 1px #008b8b,
-                          2px 2px 2px #007a7a,
-                          3px 3px 3px #006969,
-                          4px 4px 4px #005858;
+                          2px 2px 2px #050505,
+                          3px 3px 3px #040404,
+                          4px 4px 4px #030303;
 }
 
 
