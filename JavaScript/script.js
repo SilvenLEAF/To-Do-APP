@@ -52,7 +52,7 @@ let color4BG =getComputedStyle(document.documentElement).getPropertyValue('--col
 
 
 
-     
+
 /* ***********************************
 .        ALL TO BE USED FUNCTIONS
 *********************************** */
@@ -303,6 +303,8 @@ addBtn.addEventListener('click', ()=>{
 
           newTaskPage.style.display = 'block';
           container.style.display = 'none';
+
+          taskTitleInput.focus();
 
 
 })
