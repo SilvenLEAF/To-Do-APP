@@ -92,18 +92,10 @@
      padding: 20px;
      width: 80vw;
 
-     /* background: var(--mainColor); */
-     /* border-top-left-radius: 20px; */
-     /* border-bottom-right-radius: 20px; */
-     /* box-shadow: -6px 6px 6px rgba(0, 0, 0, 0.3); */
-
      display: flex;
      flex-flow: column;
      justify-content: center;
      align-items: center;
-
-
-
 }
 .new-task-page-input-holder:nth-child(odd){
      border-top:  0.5px solid rgba(0, 0, 0, 0.3);
@@ -125,8 +117,6 @@ input[type='date'], input[type='time']{
      height: 30px;
      width: 200px;
 
-     /* border-top-left-radius: 20px; */
-     /* border-bottom-right-radius: 20px; */
      background: none;
      outline: none;
      border: none;
@@ -149,9 +139,6 @@ input[type='date'], input[type='time']{
      width: 80%;
      max-width: 400px;
 
-     /* border: 0.5px solid rgba(0, 0, 0, 0.3); */
-     /* border-top-left-radius: 20px; */
-     /* border-bottom-right-radius: 20px; */
      background: var(--containerBG);
      outline: none;
      border: none;
