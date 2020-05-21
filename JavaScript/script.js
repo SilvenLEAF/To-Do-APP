@@ -1,58 +1,3 @@
-function closeNav() {
-     if(navOpen){
-          navOpen = false;
-          ham.classList.remove('clicked');
-
-          nav.classList.remove('nav-open');
-          quickTaskInput.style.display = 'flex';
-          subAddBtn.style.display = 'flex';
-          copyright.style.display = 'none';
-
-
-     }else{
-          navOpen = true;
-          ham.classList.add('clicked');
-
-          nav.classList.add('nav-open');
-          quickTaskInput.style.display = 'none';
-          subAddBtn.style.display = 'none';
-          copyright.style.display = 'flex';
-
-     }
-
-}
-
-function closeSettings() {
-     customChosen = false;
-     customInput.style.visibility = 'visible';
-     customSave.style.visibility = 'hidden';
-
-     settingsNavOpen = false;
-     settingsNav.classList.remove('settings-nav-open');
-}
-
-const settingsBtn = document.querySelector('.settings');
-const settingsNav =  document.querySelector('.settings-nav');
-const custom = document.querySelector('.custom');
-const color1 = document.querySelector('.color1');
-const color2 = document.querySelector('.color2');
-const color3 = document.querySelector('.color3');
-const color4 = document.querySelector('.color4');
-const customInput = document.querySelector('.custom-input');
-const customSave = document.querySelector('.custom-save');
-
-let color1BG =getComputedStyle(document.documentElement).getPropertyValue('--color1');
-let color2BG =getComputedStyle(document.documentElement).getPropertyValue('--color2');
-let color3BG =getComputedStyle(document.documentElement).getPropertyValue('--color3');
-let color4BG =getComputedStyle(document.documentElement).getPropertyValue('--color4');
-
-     let customColor ;
-     let customChosen = false;
-
-
-
-
-
 /* ***********************************
 .        ALL TO BE USED FUNCTIONS
 *********************************** */
@@ -224,6 +169,40 @@ function searchFilter() {
      }
 }
 
+function closeNav() {
+     if(navOpen){
+          navOpen = false;
+          ham.classList.remove('clicked');
+
+          nav.classList.remove('nav-open');
+          quickTaskInput.style.display = 'flex';
+          subAddBtn.style.display = 'flex';
+          copyright.style.display = 'none';
+
+
+     }else{
+          navOpen = true;
+          ham.classList.add('clicked');
+
+          nav.classList.add('nav-open');
+          quickTaskInput.style.display = 'none';
+          subAddBtn.style.display = 'none';
+          copyright.style.display = 'flex';
+
+     }
+
+}
+
+function closeSettings() {
+     customChosen = false;
+     customInput.style.visibility = 'visible';
+     customSave.style.visibility = 'hidden';
+
+     settingsNavOpen = false;
+     settingsNav.classList.remove('settings-nav-open');
+}
+
+
 
 
 
@@ -234,6 +213,9 @@ function searchFilter() {
 let navOpen = false;
 let searchNavOpen = false;
 let searchInputVisible = false;
+
+let customColor ;
+let customChosen = false;
 
 const dayDivisor = 1000*60*60*24;
 const hrsDivisor = 1000*60*60;
@@ -256,6 +238,27 @@ const nav = document.querySelector('.nav');
 
 //--------navs buttons
 const clearAllTasksBtn = document.querySelector('.clear-all-tasks-btn');
+
+
+//settings Nav
+const settingsBtn = document.querySelector('.settings');
+const settingsNav =  document.querySelector('.settings-nav');
+
+const custom = document.querySelector('.custom');
+const customInput = document.querySelector('.custom-input');
+const customSave = document.querySelector('.custom-save');
+
+const color1 = document.querySelector('.color1');
+const color2 = document.querySelector('.color2');
+const color3 = document.querySelector('.color3');
+const color4 = document.querySelector('.color4');
+
+//VARIABLES DRAGGER
+let color1BG =getComputedStyle(document.documentElement).getPropertyValue('--color1');
+let color2BG =getComputedStyle(document.documentElement).getPropertyValue('--color2');
+let color3BG =getComputedStyle(document.documentElement).getPropertyValue('--color3');
+let color4BG =getComputedStyle(document.documentElement).getPropertyValue('--color4');
+
 //footer elements
 const quickTaskInput = document.querySelector('.quick-task');
 const subAddBtn = document.querySelector('.sub-add-btn');
