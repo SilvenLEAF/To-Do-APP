@@ -98,16 +98,10 @@
      align-items: center;
 }
 .new-task-page-input-holder:nth-child(odd){
-     /* border-top:  0.5px solid rgba(0, 0, 0, 0.3); */
-     /* border-right:  0.5px solid rgba(0, 0, 0, 0.3); */
-
      box-shadow: 6px -6px 6px rgba(0, 0, 0, 0.1);
 }
 
 .new-task-page-input-holder:nth-child(even){
-/* border-top: 0.5px solid rgba(0, 0, 0, 0.3); */
-/* border-left:  0.5px solid rgba(0, 0, 0, 0.3); */
-
 box-shadow: -6px -6px 6px rgba(0, 0, 0, 0.1);
 }
 
