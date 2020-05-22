@@ -38,6 +38,7 @@ function  timeBomb(){
      }
 
 }
+
 function createTask() {
 
 
@@ -379,36 +380,6 @@ color4.addEventListener('click', ()=>{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // -------------------Search Button
 searchBtn.addEventListener('click', ()=>{
      searchInput.value ='';
@@ -421,6 +392,7 @@ searchBtn.addEventListener('click', ()=>{
           searchInputVisible = false;
      }else{
           searchInput.style.display = 'block';
+          searchInput.focus();
           appBanner.style.display = 'none';
 
           searchInputVisible = true;
