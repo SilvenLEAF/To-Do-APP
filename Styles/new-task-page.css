@@ -108,7 +108,7 @@ box-shadow: -6px -6px 6px rgba(0, 0, 0, 0.1);
 label{
      margin: 10px;
      font-size: 130%;
-     font-weight: 500;
+     font-weight: bolder;
      color: var(--mainColor);
 }
 input[type='date'], input[type='time']{
