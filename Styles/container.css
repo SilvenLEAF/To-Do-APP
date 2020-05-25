@@ -283,7 +283,7 @@
 
      font-size: 200%;
      color: #ddd;
-     cursor: pointer;     
+     cursor: pointer;
 }
 
 
@@ -320,6 +320,8 @@
 .nav > div, .nav > a{
      display: block;
      text-decoration: none;
+     cursor: pointer;
+
 
      width: 40px;
      height: 40px;
@@ -383,6 +385,8 @@
      width: 40px;
      height: 40px;
      border-radius: 50%;
+     cursor: pointer;
+     
 
      color: #fff;
      font-size: 150%;
