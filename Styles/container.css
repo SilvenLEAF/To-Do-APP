@@ -111,6 +111,7 @@
      color: #fff;
      font-size: 170%;
      font-weight: bold;
+     cursor: pointer;
 
      background: var(--mainColor);
      box-shadow: -3px -3px 3px rgba(255, 255, 255, 0.2),
