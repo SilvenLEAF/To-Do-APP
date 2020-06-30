@@ -309,21 +309,13 @@ addBtn.addEventListener('click', ()=>{
           container.style.display = 'none';
 
           taskTitleInput.focus();
-
-
 })
-
-
 
 // ---------------Hamburger
 hamPlate.addEventListener('click', ()=>{
      closeNav();
      closeSettings();
 })
-
-
-
-
 
 
 
