@@ -17,4 +17,4 @@ My VERY FIRST ToDoAPP without any serverside programming and database and withou
 
 
 
-<img src="/ToDoAPP Home.png" />
+<img src="/ToDoAPP Home.jpg" />
