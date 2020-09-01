@@ -224,7 +224,7 @@ const minsDivisor = 1000*60;
 
 const suggestions = ['How about hiking?', 'How about exercise?', 'How about studying?', 'How about crafting?', 'How about travelling?', 'How about fishing?', 'How about Golf?', 'How about boating?', 'How about  a stroll?']
 
-//++++++++++++++CONTAINER PAGE
+//+++++++++++++CONTAINER PAGE
 const container = document.querySelector('.container');
 const main = document.querySelector('.main');
 const tasksHolder = document.querySelector('.tasks-holder');
@@ -322,7 +322,7 @@ hamPlate.addEventListener('click', ()=>{
 
 
 
-// ---------------Settings
+// --------------Settings
 settingsBtn.addEventListener('click', ()=>{
           settingsNavOpen = true;
           settingsNav.classList.add('settings-nav-open');
@@ -398,7 +398,7 @@ searchInput.addEventListener('keyup', ()=>{
 })
 
 
-//--------------------------Quick Add Button
+//---------------------Quick Add Button
 subAddBtn.addEventListener('click', ()=>{
      taskTitleInput.value = quickTaskInput.value;
      createTask();
