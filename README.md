@@ -1,7 +1,7 @@
 # ToDoAPP
 *My VERY FIRST ToDoAPP created with Pure HTML5,  CSS3, Vanilla JavaScript!!!* 
 
-My VERY FIRST ToDoAPP without any serverside programming and database and without any library or frameworks,  created with Pure HTML5, CSS3,  Vanilla JavaScript.      
+My VERY FIRST ToDoAPP without any serverside programming or database and without any library or frameworks,  created with Pure HTML5, CSS3,  Vanilla JavaScript.      
 
 
 ## **See Live:**
@@ -9,7 +9,7 @@ My VERY FIRST ToDoAPP without any serverside programming and database and withou
 
 
 ## **Technologies Used:**
-*HTML5,  CSS3, JavaScript, git*    
+*HTML5,  CSS3, JavaScript, git* Chrome Dev Tools*    
 
 
 ### **Hosted On**
